@@ -14,7 +14,7 @@ namespace OART{
 		Line();
 		Line(double a, double b, double c);
 		Line(const Line & l);
-		Line & operator=(const Line & v);
+		Line & operator=(const Line & l);
 
 		~Line();
 

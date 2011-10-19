@@ -1,35 +1,31 @@
 #pragma once
 
+#include "Marker.h"
+
 namespace OART{
 	public class Pattern
 	{
 	public:
+		
+		char * name;
+		bool visible;
+		bool colliding;
+		Marker * marker;
+
 		Pattern();
 		Pattern(Pattern & p);
+		Pattern(int id, char * name, double width, Point & center);
 		Pattern & operator=(const Pattern & p);
 
 		~Pattern();
 
-		const Marker & marker() const;
-		Marker & rmarker();
-
-		const bool isVisible() const;
-		bool & rvisible();
-
-		const bool isColliding() const;
-		bool & rcollide();
-
+		const int & id() const;
 		const double & width() const;
-
 		const Point & center() const;
 
 	private:
-		int id;
-		char * name;
-		bool visible;
-		bool collide;
-		double width;
-		Point center;
-		Marker * marker;
+		int mid;
+		double mwidth;
+		Point mcenter;
 	};
 }
